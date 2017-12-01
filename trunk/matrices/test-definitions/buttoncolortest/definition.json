@@ -1,0 +1,79 @@
+{
+  "tests": {
+    "buttonColorTest": {
+      "version": 2,
+      "description": "button color test",
+      "constants": {
+        "COUNTRIES_IN_TEST" : ["USA", "CAN", "CHN"]
+      },
+      "rule": "${proctor:contains(COUNTRIES_IN_TEST, countryCode)}",
+      "salt": "buttonColorTest",
+      "buckets": [
+        {
+          "name": "inactive",
+          "value": -1,
+          "description": "",
+          "payload": {
+            "stringValue": ""
+          }
+        },
+        {
+          "name": "TestGroup0",
+          "value": 0,
+          "description": "orange",
+          "payload": {
+            "stringValue": "#ff6600"
+          }
+        },
+        {
+          "name": "TestGroup1",
+          "value": 1,
+          "description": "magenta",
+          "payload": {
+            "stringValue": "#CD29C0"
+          }
+        },
+        {
+          "name": "TestGroup2",
+          "value": 2,
+          "description": "blue nile blue",
+          "payload": {
+            "stringValue": "#2164f3"
+          }
+        },
+        {
+          "name": "TestGroup3",
+          "value": 3,
+          "description": "green",
+          "payload": {
+            "stringValue": "#008040"
+          }
+        }
+      ],
+      "allocations": [
+        {
+          "rule": null,
+          "ranges": [
+            {
+              "length": 0.45,
+              "bucketValue": 0
+            },
+            {
+              "length": 0.10,
+              "bucketValue": -1
+            },
+            {
+              "length": 0.45,
+              "bucketValue": 2
+            }
+          ]
+        }
+      ],
+      "testType": "USER"
+    }
+  },
+  "audit": {
+    "version": 1,
+    "updatedBy": "edgard.solorzano"
+  }
+}

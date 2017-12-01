@@ -1,0 +1,170 @@
+{
+  "tests": {
+    "emailLinkTextTest": {
+      "version": 2,
+      "description": "email text test",
+      "constants": {
+      },
+      "rule": null,
+      "salt": "emailLinkTextTest",
+      "buckets": [
+        {
+          "name": "inactive",
+          "value": -1,
+          "description": "",
+          "payload": {
+            "stringValue": ""
+          }
+        },
+        {
+          "name": "TestGroup0",
+          "value": 0,
+          "description": "hello",
+          "payload": {
+            "stringValue": "hello"
+          }
+        },
+        {
+          "name": "TestGroup1",
+          "value": 1,
+          "description": "hola",
+          "payload": {
+            "stringValue": "hola"
+          }
+        },
+        {
+          "name": "TestGroup2",
+          "value": 2,
+          "description": "bonjour",
+          "payload": {
+            "stringValue": "bonjour"
+          }
+        },
+        {
+          "name": "TestGroup3",
+          "value": 3,
+          "description": "hello aye",
+          "payload": {
+            "stringValue": "hello aye"
+          }
+        }
+      ],
+      "allocations": [
+        {
+          "rule": "${languageCode == 'en-us'}",
+          "ranges": [
+            {
+              "length": 1.0,
+              "bucketValue": 0
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 1
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 2
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 3
+            }
+          ]
+        },
+        {
+          "rule": "${languageCode == 'es'}",
+          "ranges": [
+            {
+              "length": 0.0,
+              "bucketValue": 0
+            },
+            {
+              "length": 1.0,
+              "bucketValue": 1
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 2
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 3
+            }
+          ]
+        },
+        {
+          "rule": "${languageCode == 'fr'}",
+          "ranges": [
+            {
+              "length": 0.0,
+              "bucketValue": 0
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 1
+            },
+            {
+              "length": 1.0,
+              "bucketValue": 2
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 3
+            }
+          ]
+        },
+        {
+          "rule": "${countryCode == 'CAN'}",
+          "ranges": [
+            {
+              "length": 0.0,
+              "bucketValue": 0
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 1
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 2
+            },
+            {
+              "length": 1.0,
+              "bucketValue": 3
+            }
+          ]
+        },
+        {
+          "rule": null,
+          "ranges": [
+            {
+              "length": 1.0,
+              "bucketValue": -1
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 0
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 1
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 2
+            },
+            {
+              "length": 0.0,
+              "bucketValue": 3
+            }
+          ]
+        }
+      ],
+      "testType": "USER"
+    }
+  },
+  "audit": {
+    "version": 1,
+    "updatedBy": "edgard.solorzano"
+  }
+}

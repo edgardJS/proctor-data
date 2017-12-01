@@ -1,0 +1,62 @@
+{
+  "tests": {
+    "diamondDetailTabTest": {
+      "version": 2,
+      "description": "Open diamond details in new tab",
+      "constants": {
+      },
+      "rule": null,
+      "salt": "diamondDetailTabTest",
+      "buckets": [
+        {
+          "name": "inactive",
+          "value": -1,
+          "description": "",
+          "payload": {
+            "stringValue": ""
+          }
+        },
+        {
+          "name": "TestGroup0",
+          "value": 0,
+          "description": "control",
+          "payload": {
+            "stringValue": "control"
+          }
+        },
+        {
+          "name": "TestGroup1",
+          "value": 1,
+          "description": "treatment",
+          "payload": {
+            "stringValue": "treatment"
+          }
+        }
+      ],
+      "allocations": [
+        {
+          "rule": null,
+          "ranges": [
+            {
+              "length": 0.50,
+              "bucketValue": 0
+            },
+            {
+              "length": 0.0,
+              "bucketValue": -1
+            },
+            {
+              "length": 0.50,
+              "bucketValue": 1
+            }
+          ]
+        }
+      ],
+      "testType": "USER"
+    }
+  },
+  "audit": {
+    "version": 1,
+    "updatedBy": "edgard.solorzano"
+  }
+}
